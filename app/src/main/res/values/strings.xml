@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DrawerDeneme</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="nav_drawer_tab_names">
+        <item>Doğa</item>
+        <item>Uzay</item>
+        <item>Macro</item>
+        <item>Arabalar</item>
+        <item>Müzik</item>
+        <item>Filmler</item>
+        <item>Diziler</item>
+        <item>Şehirler</item>
+        <item>Soyut</item>
+        <item>Fantazi</item>
+        <item>Oyunlar</item>
+        <item>Hayvanlar</item>
+        <item>Kaplama</item>
+        <item>Müzik</item>
+    </string-array>
+    <string-array name="nav_drawer_tab_icons">
+        <item>@drawable/ic_action_headphones</item>
+        <item>@drawable/ic_action_headphones</item>
+        <item>@drawable/ic_action_headphones</item>
+        <item>@drawable/ic_action_headphones</item>
+        <item>@drawable/ic_action_usb</item>
+        <item>@drawable/ic_action_usb</item>
+        <item>@drawable/ic_action_usb</item>
+        <item>@drawable/ic_action_usb</item>
+        <item>@drawable/ic_action_usb</item>
+        <item>@drawable/ic_action_usb</item>
+        <item>@drawable/ic_action_email</item>
+        <item>@drawable/ic_action_email</item>
+        <item>@drawable/ic_action_email</item>
+        <item>@drawable/ic_action_email</item>
+    </string-array>
+
+    <string name="desc_list_item_icons">Drawer Item Icon</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
