@@ -4,7 +4,7 @@
     <string name="app_name">DrawerDeneme</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+<!--Navigation Drawer icinde bulunacak sekmelerin adi -->
     <string-array name="nav_drawer_tab_names">
         <item>Doğa</item>
         <item>Uzay</item>
@@ -19,8 +19,8 @@
         <item>Oyunlar</item>
         <item>Hayvanlar</item>
         <item>Kaplama</item>
-        <item>Müzik</item>
     </string-array>
+    <!-- Navigation Drawer icinde bulunacak sekmelerin iconlari -->
     <string-array name="nav_drawer_tab_icons">
         <item>@drawable/ic_action_headphones</item>
         <item>@drawable/ic_action_headphones</item>
@@ -32,7 +32,6 @@
         <item>@drawable/ic_action_usb</item>
         <item>@drawable/ic_action_usb</item>
         <item>@drawable/ic_action_usb</item>
-        <item>@drawable/ic_action_email</item>
         <item>@drawable/ic_action_email</item>
         <item>@drawable/ic_action_email</item>
         <item>@drawable/ic_action_email</item>

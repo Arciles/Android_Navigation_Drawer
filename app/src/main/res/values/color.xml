@@ -2,4 +2,5 @@
 <resources>
     <color name="DarkOrange">#EE7600</color>
     <color name="White">#FFF</color>
+    <color name="LightYellow">#FFFF33</color>
 </resources>
