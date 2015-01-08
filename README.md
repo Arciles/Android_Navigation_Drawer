@@ -1,4 +1,4 @@
-# Android_Navigation_Drawer
+# Android Navigation Drawer
 
 
-Android için Navigation Drawer Yapısı içeren bil dummy uygulama
+Android için Navigation Drawer yapısı içeren bie dummy uygulama.
