@@ -1,11 +1,24 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ripple_material_dark"
     tools:context="com.arcileslab.arciles.drawerdeneme.ArabalarFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gvArabalar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:columnWidth = "150dp"
         android:gravity="center"
-        android:text="Arabalar Fragment" />
+        android:horizontalSpacing ="5dp"
+        android:numColumns="auto_fit"
+        android:stretchMode ="columnWidth"
+        android:verticalSpacing ="5dp"
+        android:padding="5dp"
+        android:layout_alignParentTop="true" />
 
 </RelativeLayout>

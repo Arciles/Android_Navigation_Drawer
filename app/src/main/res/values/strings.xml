@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">DrawerDeneme</string>
+    <string name="app_name">Duvar Kağıdı Ustası</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="clear_cache">Clear Cache</string>
 <!--Navigation Drawer icinde bulunacak sekmelerin adi -->
     <string-array name="nav_drawer_tab_names">
         <item>Doğa</item>
