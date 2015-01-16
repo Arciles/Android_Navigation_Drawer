@@ -17,6 +17,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+
 import java.util.ArrayList;
 
 import navigationView.NavDrawerItem;
@@ -47,7 +49,7 @@ public class MainActivity extends ActionBarActivity {
         this.navDrawerTitle = this.getTitle();
         navDrawerListView = (ListView) findViewById(R.id.drawerList);
         navDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        navDrawerItems = new ArrayList<NavDrawerItem>();
+        navDrawerItems = new ArrayList<>();
         this.navDrawerItemTitles = this.getResources().getStringArray(R.array.nav_drawer_tab_names);
         this.navDrawerItemIcons = this.getResources().obtainTypedArray(R.array.nav_drawer_tab_icons);
 
@@ -147,11 +149,6 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        menu.findItem(R.id.action_clear_cache).setVisible(!this.navDrawerLayout.isDrawerOpen(R.id.drawerList));
-        return super.onPrepareOptionsMenu(menu);
-    }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -164,12 +161,7 @@ public class MainActivity extends ActionBarActivity {
         this.getSupportActionBar().setTitle(title);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -180,16 +172,32 @@ public class MainActivity extends ActionBarActivity {
             return true;
         switch (item.getItemId()) {
             case R.id.action_clear_cache:
+                if(ImageLoader.getInstance() != null) {
+                    ImageLoader.getInstance().clearDiskCache();
+                    ImageLoader.getInstance().clearMemoryCache();
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-
         }
-//        int id = item.getItemId();
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
+    }
+
+
+    /*
+    * Bu iki method options menusunu olusturmaya yariyor eger build dişi birakilirse options menusu olusturulamiyor.
+    * */
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.action_clear_cache).setVisible(!this.navDrawerLayout.isDrawerOpen(R.id.drawerList));
+        return super.onPrepareOptionsMenu(menu);
     }
 }
